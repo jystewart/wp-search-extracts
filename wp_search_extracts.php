@@ -72,7 +72,8 @@ function search_extract_process($postcontent) {
 
     if ($position !== FALSE) {
       $start = $position > PADDING_AROUND_RESULT ? $position - PADDING_AROUND_RESULT : 0;
-      $before = substr($stripped_content, $start, PADDING_AROUND_RESULT);
+      $before_length = ($start == 0) ? $position : PADDING_AROUND_RESULT;
+      $before = substr($stripped_content, $start, $before_length);
       $after = substr($stripped_content, $position + strlen($full_term), PADDING_AROUND_RESULT);
       return $before . '<em class="search-match">' . $full_term . '</em>' . $after;
     }
