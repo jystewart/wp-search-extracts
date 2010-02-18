@@ -22,7 +22,7 @@ for the given search.
 
 == Upgrade Notice ==
 
-This is the first version so I'm the only one who'll be doing any upgrading.
+Nothing to do.
 
 == To Do ==
 * Add automated tests
@@ -30,6 +30,9 @@ This is the first version so I'm the only one who'll be doing any upgrading.
 * Solicit user feedback on further options
 
 == Changelog ==
+
+= 1.0.1 =
+* Fix issue where matched term is near the beginning of the string, which could cause duplication in results (thanks to Ben Walker)
 
 = 1.0 =
 * Consolidated code for first release
